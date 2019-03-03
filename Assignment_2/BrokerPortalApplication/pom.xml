@@ -12,7 +12,7 @@
 	<groupId>com.macs.dal.groupone</groupId>
 	<artifactId>BrokerPortalApplication</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Friendbook</name>
+	<name>BrokerPortalApplication</name>
 	<description>Broker Portal  group work</description>
 	<packaging>war</packaging>
 
@@ -86,11 +86,7 @@
 			<optional>true</optional>
 		</dependency>
 
-		<dependency>
-			<groupId>org.webjars</groupId>
-			<artifactId>bootstrap</artifactId>
-			<version>3.3.7-1</version>
-		</dependency>
+
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>jquery</artifactId>
@@ -121,9 +117,9 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
-					<fork>true</fork>
-					<executable>C:\Program Files\Java\jdk1.8.0_191\bin\javac</executable>
-				</configuration>
+					<!--<fork>true</fork>
+					 <executable>C:\Program Files\Java\jdk1.8.0_191\bin\javac</executable>-->
+                </configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -132,14 +128,7 @@
 					<testFailureIgnore>true</testFailureIgnore>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
-				</configuration>
-			</plugin>
+
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
