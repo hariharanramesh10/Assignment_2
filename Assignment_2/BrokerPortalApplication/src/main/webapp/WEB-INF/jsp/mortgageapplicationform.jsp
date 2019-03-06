@@ -43,9 +43,9 @@
 <div class="container" style="margin-top:40px">
 <c:if test="${not empty successMessage}">
 									<div class="alert alert-success" role="alert">
-  <a href="#" class="alert-link">${successMessage}!! Your Application number is ${applicationNumber}</a>
+  <a href="#" class="alert-link">${successMessage}!! Your Application number is ${applicationNumber} and link is ${link}.</a>
   <script type="text/javascript">
-  document.mortgageForm.reset();
+  //document.mortgageForm.reset();
   </script>
 </div>
 								</c:if>
@@ -106,7 +106,7 @@
                         </div>
                         <center>
                         <div class="form-group">
-                            <input type="submit" style="max-width:150px" class="btn btn-lg btn-primary btn-block" value="Submit">
+                            <input type="submit" style="max-width:150px" class="btn btn-lg btn-primary btn-block" value="Submit" >
                         </div>
                         </center>
                     </form>

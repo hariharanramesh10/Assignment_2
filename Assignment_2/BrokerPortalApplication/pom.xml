@@ -9,7 +9,7 @@
 		<version>2.1.1.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.macs.dal.groupone</groupId>
+	<groupId>com.macs.dal.teamtwo</groupId>
 	<artifactId>BrokerPortalApplication</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>BrokerPortalApplication</name>
