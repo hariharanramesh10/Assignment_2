@@ -29,7 +29,7 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Broker Portal</a>
+      <a class="navbar-brand" href="/mortgageapplicationform">Broker Portal</a>
     </div>
   </div>
 </nav>
@@ -81,8 +81,8 @@
                         </div>
                     </form>
                      </div>
-                 <p style="text-align:right">
-                     New Member? <a href="registration.jsp" onClick="">signUp </a> 
+                 <p style="text-align:right;margin-right: 25px;margin-top: -10px;margin-bottom: 15px">
+                     New Member? <a href="/mortgageapplicationform" onClick="">signUp </a> 
                 </p>
             </div>
         </div>
