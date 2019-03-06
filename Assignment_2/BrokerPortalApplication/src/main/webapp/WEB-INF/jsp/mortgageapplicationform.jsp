@@ -50,7 +50,7 @@
 </div>
 								</c:if>
 <c:if test="${not empty errorMessage}">
-                            <div class="alert alert-danger">
+                            <div class="alert alert-danger" role="alert">
                                 <strong>
                                         ${errorMessage}
                                 </strong>

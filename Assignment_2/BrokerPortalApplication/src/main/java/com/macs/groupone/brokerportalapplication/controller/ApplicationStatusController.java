@@ -38,7 +38,7 @@ public class ApplicationStatusController {
 			modelAndView.addObject("errorMessage", "applicant does not exists");
 		} else
 		{
-			modelAndView.addObject("successMessage", "Applicant status is : + "+applicant.getApplicationStatus());
+			modelAndView.addObject("successMessage", "Applicant status is : "+applicant.getApplicationStatus());
 			System.out.println("status of the Application : "+applicant.getApplicationStatus());
 		}
 		modelAndView.setViewName("applicationstatus");

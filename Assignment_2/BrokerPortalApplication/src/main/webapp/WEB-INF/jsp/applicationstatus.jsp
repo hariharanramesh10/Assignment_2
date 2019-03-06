@@ -35,8 +35,20 @@
 </nav>
 
 <div class="container" style="margin-top:40px">
+<c:if test="${not empty successMessage}">
+									<div class="alert alert-success" role="alert">
+  <a href="#" class="alert-link">${successMessage}!!</a>
+</div>
+								</c:if>
+<c:if test="${not empty errorMessage}">
+                            <div class="alert alert-danger" role="alert">
+                                <strong>
+                                        ${errorMessage}
+                                </strong>
+                            </div>
+                        </c:if>
     <div class="row">
-        <div class="col-sm-6 col-md-4 col-md-offset-4">
+        <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <strong>Check Application Status</strong>
@@ -60,21 +72,6 @@
                                     <input class="form-control" placeholder="Application Number" name="applicationNumber" type="text" value="${param.applicationNumber}" autocomplete="off" required maxlength="255">
                                 </div>
                             </div>
-	                            <c:if test="${not empty errorMessage}">
-                                <div class="alert alert-danger">
-                                    <strong>
-                                        ${errorMessage}
-                                    </strong>
-                                </div>
-                            </c:if>
-                            <c:if test="${not empty sucessMessage}">
-                                <div class="alert alert-danger">
-                                    <strong>
-                                        ${sucessMessage}
-                                    </strong>
-                                </div>
-                                
-                            </c:if>
                             <div class="form-group">
                                 <input type="submit" class="btn btn-lg btn-primary btn-block" value="Submit">
                             </div>
