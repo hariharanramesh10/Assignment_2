@@ -18,7 +18,6 @@ public class RegistrationController {
 	@Autowired
 	MortgageApplicantService mortgageApplicantService;
 
-
 	// show registration
 	@RequestMapping(value = "/mortgageapplicationform", method = RequestMethod.GET)
 	public ModelAndView showSignUpPage(ModelAndView modelAndView) {
@@ -34,10 +33,9 @@ public class RegistrationController {
 		    if(addedMortgageApplicant!=null)
 		    {
 		    	modelAndView.addObject("successMessage", "Application submitted Sucessfully");
-		    	modelAndView.addObject("applicationNumber"+addedMortgageApplicant.getApplicationNumber());
-		    	modelAndView.addObject("link"+"http://localhost:8080/applicantdetails");
-		    }else
-		    {
+		    	modelAndView.addObject("applicationNumber", addedMortgageApplicant.getApplicationNumber());
+		    	modelAndView.addObject("link","http://localhost:8080/applicantdetails");
+		    } else {
 		    	modelAndView.addObject("errorMessage", "Something went Wrong...");
 		    }
 			modelAndView.setViewName("mortgageapplicationform");
