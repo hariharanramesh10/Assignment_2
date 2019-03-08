@@ -39,9 +39,9 @@ public class RegistrationController {
 		    	modelAndView.addObject("successMessage", "Application submitted Sucessfully");
 		    	modelAndView.addObject("applicationNumber", addedMortgageApplicant.getApplicationNumber());
 		    	
-		    	String employerPort = env.getRequiredProperty("employerPort");
-		    	String employerIp = env.getRequiredProperty("employerIp");
-		    	String Link = "http://" +employerIp+":"+employerPort+"/applicantdetails";
+		    	String brokerPort = env.getRequiredProperty("server.port");
+		    	String brokerIp = env.getRequiredProperty("serverIp");
+		    	String Link = "http://" +brokerIp+":"+brokerPort+"/morgageaaplicant/";
 		    	modelAndView.addObject("link",Link);
 		    } else {
 		    	modelAndView.addObject("errorMessage", "Something went Wrong...");

@@ -16,7 +16,7 @@ public class MortgageApplicant {
 	
 	private String salary;
 	
-	private int phoneNumber;
+	private double phoneNumber;
 	
 	private String applicationNumber;
 	
@@ -29,7 +29,7 @@ public class MortgageApplicant {
 		
 	}
 	
-	public MortgageApplicant(String firstName, String lastName,String employerName,String address,String salary,int phoneNumber,String applicationNumber,String email,String applicationStatus) {
+	public MortgageApplicant(String firstName, String lastName,String employerName,String address,String salary,double phoneNumber,String applicationNumber,String email,String applicationStatus) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -67,11 +67,11 @@ public class MortgageApplicant {
 		this.address = address;
 	}
 
-	public int getPhoneNumber() {
+	public double getPhoneNumber() {
 		return phoneNumber;
 	}
 
-	public void setPhoneNumber(int phoneNumber) {
+	public void setPhoneNumber(double phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 

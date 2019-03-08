@@ -11,8 +11,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.macs.teamtwo.employerportalapplication.service.EmployeeService;
 
-
-
 @Controller
 public class ApplicationStatusController {
 
@@ -36,14 +34,18 @@ public class ApplicationStatusController {
 		
 		 if(validApplicant)
 		    {
+		    	//modelAndView.addObject("successMessage", "Employee Authenticated Sucessfully from Broker");
+		    	modelAndView.setViewName("applicationstatus");
 		    	modelAndView.addObject("successMessage", "Employee Authenticated Sucessfully from Broker");
 		    }else
 		    {
-		    	modelAndView.addObject("errorMessage", "Could not  Authenticate Employee Sucessfully from Broker");
+		    	modelAndView.addObject("errorMessage", "Could not  Authenticate Employee for Broker");
 		    }
-			modelAndView.setViewName("applicationstatus");
+			
 		return modelAndView;
 		
 	}
 
 }
+
+

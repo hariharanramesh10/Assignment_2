@@ -24,4 +24,9 @@ public class MortgageApplicantVerificationController {
 		
 	}
 
+	@GetMapping(value = "/morgageaaplicantStatus/{applicationNumber}")
+	public MortgageApplicant UpdateBrokerStatus(@PathVariable String applicationNumber) {
+		return mortgageApplicantService.UpdateMortgageApplicant(applicationNumber);
+		
+	}
 }

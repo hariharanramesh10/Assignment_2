@@ -30,11 +30,12 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Broker Portal</a>
+      <a class="navbar-brand" href="#">Employer Portal</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
+      <ul class="nav navbar-nav navbar-right">               
+      
         <li><a href="#">New Member?</a></li>
       </ul>
     </div>
@@ -48,7 +49,24 @@
                 <div class="panel-heading">
                     <strong>${sign_in_continue}</strong>
                 </div>
+                 
                 <div class="panel-body">
+                  <c:if test="${not empty errorMessage}">
+                                <div class="alert alert-danger">
+                                    <strong>
+                                        ${errorMessage}
+                                    </strong>
+                                </div>
+                            </c:if>
+                            <c:if test="${not empty sucessMessage}">
+                                <div class="alert alert-danger">
+                                    <strong>
+                                        ${sucessMessage}
+                                    </strong>
+                                </div>
+                                
+                            </c:if>
+                 
                     <form role="form" action="/applicationstatus" method="post" autocomplete="off">
                         <div class="col-sm-12 col-md-10 col-md-offset-1 ">
                             <div class="form-group">
@@ -67,23 +85,14 @@
                                     <input class="form-control" placeholder="Application Number" name="applicationNumber" type="text" value="" autocomplete="off" required maxlength="255">
                                 </div>
                             </div>
-	                            <c:if test="${not empty errorMessage}">
-                                <div class="alert alert-danger">
-                                    <strong>
-                                        ${errorMessage}
-                                    </strong>
+                                 <div class="form-group">
+                                <div class="input-group">
+                                   <input type="checkbox" name="tnC" value="terms" id="chkTerms"> I agree to terms and conditions<br>
                                 </div>
-                            </c:if>
-                            <c:if test="${not empty sucessMessage}">
-                                <div class="alert alert-danger">
-                                    <strong>
-                                        ${sucessMessage}
-                                    </strong>
-                                </div>
-                                
-                            </c:if>
+                            </div>
+	                           
                             <div class="form-group">
-                                <input type="submit" class="btn btn-lg btn-primary btn-block" value=${sign_in}>
+                                <input type="submit" class="btn btn-lg btn-primary btn-block" id ="btnStatus" value="${get_status}" disabled="disabled">
                             </div>
                         </div>
                     </form>
@@ -92,6 +101,12 @@
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+$("#chkTerms").click(function(){   
+    $("#btnStatus").attr('disabled', !this.checked)
+});
+</script>
 
 </body>
 </html>

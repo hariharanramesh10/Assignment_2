@@ -34,11 +34,12 @@ public class LoginController {
 		    if(emp!=null)
 		    {
 		    	modelAndView.addObject("successMessage", "Employee Authenticated Sucessfully");
+		    	modelAndView.setViewName("applicationstatus");
 		    }else
 		    {
-		    	modelAndView.addObject("errorMessage", "Something went Wrong...");
+		    	modelAndView.addObject("errorMessage", "Incorrect Email-Id or Password ");
 		    }
-			modelAndView.setViewName("applicationstatus");
+			
 		return modelAndView;
 	}
 

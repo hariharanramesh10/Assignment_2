@@ -1,6 +1,7 @@
 package com.macs.teamtwo.brokerportalapplication.service;
 
 
+import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +31,16 @@ public class MortgageApplicantService {
 		return mortgageApplicant;
 	}
 
+	// update employee
+		public MortgageApplicant UpdateMortgageApplicant(String ApplicationNumber) {
+			//applicant.setApplicationStatus("Done");
+			MortgageApplicant mortgageApplicant=mortgageApplicantRepository.getApplicantByApplicationNumber(ApplicationNumber);
+			
+			mortgageApplicant.setApplicationStatus("Verified!");
+			MortgageApplicant Applicant=mortgageApplicantRepository.save(mortgageApplicant);
+			return Applicant;
+		}
+	
 	public MortgageApplicant getApplicantByApplicationID(String ApplicationNumber) {
 		// TODO Auto-generated method stub
 		MortgageApplicant mortgageApplicant=mortgageApplicantRepository.getApplicantByApplicationNumber(ApplicationNumber);
