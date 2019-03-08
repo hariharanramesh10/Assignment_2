@@ -26,12 +26,32 @@
 <fmt:message bundle="${loc}" key="local.label.get_status" var="get_status"/>
 
 <body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/mortgageapplicationform">Broker Portal</a>
+    </div>
+  </div>
+</nav>
+
 <div class="container" style="margin-top:40px">
+<c:if test="${not empty successMessage}">
+									<div class="alert alert-success" role="alert">
+  <a href="#" class="alert-link">${successMessage}!!</a>
+</div>
+								</c:if>
+<c:if test="${not empty errorMessage}">
+                            <div class="alert alert-danger" role="alert">
+                                <strong>
+                                        ${errorMessage}
+                                </strong>
+                            </div>
+                        </c:if>
     <div class="row">
-        <div class="col-sm-6 col-md-4 col-md-offset-4">
+        <div class="col-md-6 col-md-offset-3">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <strong>${sign_in_continue}</strong>
+                    <strong>Check Application Status</strong>
                 </div>
                 <div class="panel-body">
                     <form role="form" action="/applicationstatus" method="post" autocomplete="off">
@@ -52,33 +72,15 @@
                                     <input class="form-control" placeholder="Application Number" name="applicationNumber" type="text" value="${param.applicationNumber}" autocomplete="off" required maxlength="255">
                                 </div>
                             </div>
-	                            <c:if test="${not empty errorMessage}">
-                                <div class="alert alert-danger">
-                                    <strong>
-                                        ${errorMessage}
-                                    </strong>
-                                </div>
-                            </c:if>
-                            <c:if test="${not empty sucessMessage}">
-                                <div class="alert alert-danger">
-                                    <strong>
-                                        ${sucessMessage}
-                                    </strong>
-                                </div>
-                                
-                            </c:if>
                             <div class="form-group">
-                                <input type="submit" class="btn btn-lg btn-primary btn-block" value=${sign_in}>
+                                <input type="submit" class="btn btn-lg btn-primary btn-block" value="Submit">
                             </div>
-                            <div class="form-group">
-				                    ${forgor_password} <a href="forgotpassword.jsp" onClick=""> ${forgot_password} </a>
-				             </div>
                         </div>
                     </form>
                      </div>
-                 <div class="panel-footer">
-                     ${new_user} <a href="registration.jsp" onClick=""> ${sign_up_here} </a> 
-                </div>
+                 <p style="text-align:right;margin-right: 25px;margin-top: -10px;margin-bottom: 15px">
+                     New Member? <a href="/mortgageapplicationform" onClick="">signUp </a> 
+                </p>
             </div>
         </div>
     </div>

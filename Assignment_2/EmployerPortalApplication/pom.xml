@@ -9,10 +9,10 @@
 		<version>2.1.1.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.macs.dal.groupone</groupId>
+	<groupId>com.macs.dal.teamtwo</groupId>
 	<artifactId>EmployerPortalApplication</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Friendbook</name>
+	<name>EmployerPortalApplication</name>
 	<description>Employer Portal group work</description>
 	<packaging>war</packaging>
 
@@ -88,11 +88,14 @@
          <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-rest</artifactId>
+<<<<<<< HEAD
 		</dependency>
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>bootstrap</artifactId>
 			<version>3.3.7-1</version>
+=======
+>>>>>>> 72b8f797275afa6ba919ef34eac6e873e287b044
 		</dependency>
 		<dependency>
 			<groupId>org.webjars</groupId>
@@ -126,6 +129,8 @@
 					<target>1.8</target>
 <!-- 					<fork>true</fork> -->
 <!-- 					<executable>C:\Program Files\Java\jdk1.8.0_191\bin\javac</executable> -->
+
+
 				</configuration>
 			</plugin>
 			<plugin>

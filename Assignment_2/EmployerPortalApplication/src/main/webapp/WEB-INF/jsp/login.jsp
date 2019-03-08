@@ -67,7 +67,7 @@
                                 </div>
                             </c:if>
                             <div class="form-group">
-                                <input type="submit" class="btn btn-lg btn-primary btn-block" value=${sign_in}>
+                                <input type="submit" class="btn btn-lg btn-primary btn-block" value="${sign_in}">
                             </div>
                         </div>
                     </form>
